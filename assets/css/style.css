@@ -309,7 +309,7 @@ main {
 
 .sidebar {
   margin-bottom: 15px;
-  max-height: 112px;
+  max-height: 405px;
   overflow: hidden;
   transition: var(--transition-2);
 }
@@ -342,9 +342,25 @@ main {
   background: var(--onyx);
   font-size: var(--fs-8);
   font-weight: var(--fw-300);
-  width: max-content;
+  width: 100%;
+  max-width: 100%;
   padding: 3px 12px;
   border-radius: 8px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+
+.info-content .title + .title {
+  margin-top: 8px;
+}
+
+.info-content .title:nth-last-of-type(2),
+.info-content .title:nth-last-of-type(1) {
+  margin-bottom: -8px;/* sets space below "PhD Candidate at the University of Oxford" */ 
 }
 
 .info_more-btn {
@@ -380,8 +396,8 @@ main {
 .info_more-btn span { display: none; }
 
 .sidebar-info_more {
-  opacity: 0;
-  visibility: hidden;
+  opacity: 1;
+  visibility: visible;
   transition: var(--transition-2);
 }
 
@@ -406,13 +422,15 @@ main {
 .contact-info {
   max-width: calc(100% - 46px);
   width: calc(100% - 46px);
+  margin-top: -11px/* sets space above "Location" */ 
 }
 
 .contact-title {
   color: var(--light-gray-70);
   font-size: var(--fs-8);
   text-transform: uppercase;
-  margin-bottom: 2px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .contact-info :is(.contact-link, time, address) {
@@ -1387,7 +1405,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   .sidebar {
-    max-height: 180px;
+    max-height: 584px;
     margin-bottom: 30px;
   }
 
@@ -1933,7 +1951,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     text-align: center;
   }
 
-  .info-content .title { margin: auto; }
+  .info-content .title { margin: 0 auto 8px; }
 
   .info_more-btn { display: none; }
 
@@ -1946,7 +1964,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 
   .separator:last-of-type {
-    margin: 15px 0;
+    margin: 10px 0;
     opacity: 0;
   }
 
