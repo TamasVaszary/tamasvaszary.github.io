@@ -68,7 +68,7 @@
   --fs-5: 15px;
   --fs-6: 14px;
   --fs-7: 13px;
-  --fs-8: 11px;
+  --fs-8: 14px;/* for the smallest screens, below 450px, I manually changed this from 11px to 14px*/
 
   /* font-weight */
   --fw-300: 300;
@@ -145,8 +145,52 @@ body {
 }
 
 
+/*-----------------------------------*\
+  Extra space for the timeline section, only used once
+\*-----------------------------------*/
+.timeline-intro {
+  display: block;           /* ensures it behaves like a block element */
+  margin-bottom: 30px !important; /* push timeline-list down */
+}
 
+/* Only affects the Practise page */
+.equation-wrapper img {
+  display: block;
+  margin: 10px auto;  /* centers the image */
+  width: auto;
+  max-width: 30%;     /* big screens */
+}
 
+@media (max-width: 768px) {
+  .equation-wrapper img {
+    max-width: 60%;   /* medium screens */
+  }
+}
+
+@media (max-width: 450px) {
+  .equation-wrapper img {
+    max-width: 70%;   /* small screens */
+  }
+}
+
+.circuit-wrapper img {
+  display: block;
+  margin: 10px auto;
+  width: auto;
+  max-width: 40%;
+}
+
+@media (max-width: 768px) {
+  .circuit-wrapper img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 450px) {
+  .circuit-wrapper img {
+    max-width: 70%;
+  }
+}
 
 
 /*-----------------------------------*\
